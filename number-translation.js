@@ -54,8 +54,7 @@ jQuery(document).ready(function() {
   });
   
   jQuery('textarea, input').keyup(function() {
-    var id = this.id;
-    var value = jQuery('#' + id).val().toString().replace(/1|2|3|4|5|6|7|8|9|0/gi, function(matched) {
+    var value = jQuery(this).val().toString().replace(/1|2|3|4|5|6|7|8|9|0/gi, function(matched) {
       return mapObj[matched];
     });
     jQuery(this).val(value);
