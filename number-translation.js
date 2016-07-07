@@ -49,20 +49,20 @@ $.fn.replaceText = function( search, replace, text_only ) {
 
 var selector= 'a, p, h6, h5, h4, h3, h2, h1, option, strong, span, div, dd, dt, td, button, header, footer, form, input, select, textarea';
 jQuery(document).ready(function() {
-  jQuery(selector).replaceText(/1|2|3|4|5|6|7|8|9|0/gi, function(matched){
-    return mapObj[matched];
-  });
-  
-  jQuery('textarea, input').keyup(function() {
-    var value = jQuery(this).val().toString().replace(/1|2|3|4|5|6|7|8|9|0/gi, function(matched) {
-      return mapObj[matched];
+    jQuery(selector).replaceText(toTranslate, function(matched){
+        return mapObj[matched];
+    });
+
+jQuery('textarea, input').keyup(function() {
+    var value = jQuery(this).val().toString().replace(toTranslate, function(matched) {
+        return mapObj[matched];
     });
     jQuery(this).val(value);
-  });
-  
-  jQuery('body').bind("DOMSubtreeModified",function(){
-    jQuery(selector).replaceText(/1|2|3|4|5|6|7|8|9|0/gi, function(matched){
-      return mapObj[matched];
+});
+
+    jQuery('body').bind("DOMSubtreeModified",function(){
+      jQuery(selector).replaceText(toTranslate, function(matched){
+          return mapObj[matched];
+      });
     });
-  });
 });
