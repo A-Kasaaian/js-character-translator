@@ -5,7 +5,7 @@ Sample: https://jsfiddle.net/alirezakasaaian/x9xdmxyL/
 
 ## How to use it
 
-1- place below script tag to your page before </body> (It is a library for your characters.). It is a sample which translates english numbers on left hand to persian numbers on right hand. you can translate any character to any:
+1- place below script tag to your page before </body>. It is containing a library for your characters and their translations and a string of characters that you want to be translated on this page. It is a sample which translates english numbers on left hand to persian numbers on right hand. you can translate any character to any:
 ```
 <script>
    var mapObj = {
@@ -20,7 +20,8 @@ Sample: https://jsfiddle.net/alirezakasaaian/x9xdmxyL/
           '9':"۹",
           '0':'۰'
       };
-  </script>
+   var toTranslate = /1|2|3|4|5|6|7|8|9|0|lipstick/gi;
+ </script>
   ```
 2- Add translate.js after that
   enjoy it :) 
