@@ -1,7 +1,7 @@
 # js-character-translator
 
 This project helps you to translate a library of characters.It is sensitive to changes on your page. If an element changes on your page, It updates characters in the updated element if there is any. It is also sensitive to input and textarea fields, if anyone type in an input or textarea on your page, they'll see translated characters instead of what they have typed.
-Sample: https://jsfiddle.net/alirezakasaaian/x9xdmxyL/
+Sample: http://codepen.io/alirezakasaaian/pen/EyvNrb
 
 ## How to use it
 
