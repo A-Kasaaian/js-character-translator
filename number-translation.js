@@ -47,7 +47,7 @@ $.fn.replaceText = function( search, replace, text_only ) {
   });
 };
 
-var selector= 'a, p, h6, h5, h4, h3, h2, h1, option, strong, span, div, dd, dt, td, button, header, footer, form, input, select, textarea';
+var selector= 'a, b, p, h6, h5, h4, h3, h2, h1, option, strong, span, div, dd, dt, td, th, button, header, footer, form, input, select, textarea';
 jQuery(document).ready(function() {
     jQuery(selector).replaceText(toTranslate, function(matched){
         return mapObj[matched];
