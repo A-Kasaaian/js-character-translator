@@ -46,23 +46,29 @@ $.fn.replaceText = function( search, replace, text_only ) {
     if(remove.length){ $(remove).remove(); }
   });
 };
+var toTranslate = [];
+$.each( Dictionary, function( key, value ) {
+		toTranslate.push(key);
+});
+toTranslate = new RegExp(toTranslate.join("|"), 'gi');
+
 
 var selector= 'a, b, p, h6, h5, h4, h3, h2, h1, option, strong, span, div, dd, dt, td, th, button, header, footer, form, input, select, textarea';
 jQuery(document).ready(function() {
-    jQuery("*").replaceText(toTranslate, function(matched){
-        return mapObj[matched];
+    jQuery('*').replaceText(toTranslate, function(matched){
+        return Dictionary[matched];
     });
 
 jQuery('textarea, input').keyup(function() {
     var value = jQuery(this).val().toString().replace(toTranslate, function(matched) {
-        return mapObj[matched];
+        return Dictionary[matched];
     });
     jQuery(this).val(value);
 });
 
     jQuery('body').bind("DOMSubtreeModified",function(){
       jQuery(selector).replaceText(toTranslate, function(matched){
-          return mapObj[matched];
+          return Dictionary[matched];
       });
     });
 });
