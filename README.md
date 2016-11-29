@@ -7,7 +7,7 @@ Sample: http://codepen.io/alirezakasaaian/pen/EyvNrb
 Requirment:
 jQuery
 
-1- Add string.js after jQuery and before </body>. It is containing a library for your characters and their translations. It is a sample code which translates english numbers on left hand to persian numbers on right hand. you can translate any character to any:
+1- Add string.js after jQuery and before end of body tag. It is containing a library for your characters and their translations. It is a sample code which translates english numbers on left hand to persian numbers on right hand. you can translate any character to any:
 
 2- Add translate.js after string.js
   enjoy it :) 
